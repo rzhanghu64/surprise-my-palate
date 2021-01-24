@@ -44,7 +44,6 @@ function appendToMealHistory(item, index) {
 }*/
 
 $(document).on("click", ".submitButton", function () {
-    console.log("HEY I WAS CLICKED");
     console.log(mealHistory);
     console.log(ingredientBlacklist);
     $.ajax({
@@ -56,7 +55,7 @@ $(document).on("click", ".submitButton", function () {
       }),
       url: 'http://localhost:4000/foods',
       success: (d, ts, jq) => {
-        console.log("I AM THE SUCCEED")
+
       }
     });
 })
