@@ -11,25 +11,41 @@ const db = low(adapter);
 
 /**
  * Function to pick a random food, constrained by arguments passed.
+ * user object: Expecting diet and recent_meals
  */
-const pickFood = (diet, recent_meals) => {
+const pickFood = (user) => {
   //Pick a random food
   let food;
+  //Obtain non-compatible list of ingredients for the dietary and merge (as list)
+  let nc = getNonCompatible(user.diet);
+
   //Check against DB to check for dietary restricts
-  while(isGoodFood(food = randomFood(), diet, recent_meals))
+  while(isGoodFood(food = randomFood(), user, nc))
     ;
   return food;
 };
 
+const getNonCompatible = (diet) => {
+  let nc = new Set();
+  //For each dietary restriction...
+  for(let restrict of diet) {
+    //Loop through each non-compatible ingredient
+    let ncIngredients = db.get(`diets.${restrict}.non-compatible`).value();
+    for(let ing of ncIngredients) {
+      nc.add(ing);
+    }
+  }
+  return Array.from(nc);
+}
+
 /**
  * Check to see if the food is ok
+ * user object: Expecting diet and recent_meals
+ *
  */
-const isGoodFood = (food, diet, recent_meals) => {
-  //Obtain non-compatible list of ingredients for the dietary and merge (as list)
-
+const isGoodFood = (food, user, non-compatible) => {
   //Check each ingredient for compatibility in foods.ingredients, return if not so
   
-  //NOTE: Add this DB call above to minimize, in pickFood
 };
 
 /**
