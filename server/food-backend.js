@@ -30,7 +30,10 @@ const getNonCompatible = (diet) => {
   //For each dietary restriction...
   for(let restrict of diet) {
     //Loop through each non-compatible ingredient
+    //TODO: This breaks if we pass a diet that does not exist in the DB already
+    //TODO: Add case to handle users that have no dietary restrictions
     let ncIngredients = db.get(`diets.${restrict}.non-compatible`).value();
+    console.log(ncIngredients);
     for(let ing of ncIngredients) {
       nc.add(ing);
     }
@@ -55,4 +58,8 @@ const randomFood = () => {
   const foods = db.get('foods').value();
   let randFoodIndex = common.randInt(0, foods.length);
   return foods[randFoodIndex];
+};
+
+module.exports = {
+  pickFood
 };
