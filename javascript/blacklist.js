@@ -44,14 +44,19 @@ function submitBlacklist() {
 }
 
 $(document).on("click", ".submitButton", function () {
+    console.log("HEY I WAS CLICKED");
     console.log(mealHistory);
     console.log(ingredientBlacklist);
     $.ajax({
-    method: "POST",
-    url: '/food',
-    data: {
-        ingredientBlacklist,
-        mealHistory
-    }
+      method: "POST",
+      contentType: "application/json",
+      data: JSON.stringify({
+        'diet': ingredientBlacklist,
+        'meal-history': mealHistory
+      }),
+      url: 'http://localhost:4000/foods',
+      success: (d, ts, jq) => {
+        console.log("I AM THE SUCCEED")
+      }
     });
 })
