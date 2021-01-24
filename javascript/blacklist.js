@@ -14,3 +14,4 @@ function submitBlacklist() {
     var data = JSON.stringify(ingredientBlacklist);
     xhr.send(data);
 }
+
