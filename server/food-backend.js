@@ -39,13 +39,13 @@ const getNonCompatible = (diet) => {
 }
 
 /**
- * Check to see if the food is ok
- * user object: Expecting diet and recent_meals
- *
+ * Check to see if the food is ok.
+ * nc - non-compatible array
  */
-const isGoodFood = (food, user, non-compatible) => {
+const isGoodFood = (food, nc) => {
   //Check each ingredient for compatibility in foods.ingredients, return if not so
-  
+  let ingredients = db.get('foods').find({ name: food }).value().ingredients;
+  return !ingredients.some(ing => nc.includes(ing));
 };
 
 /**
