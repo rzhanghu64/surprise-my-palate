@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "populate": "node populate.js",
     "start": "npx nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
