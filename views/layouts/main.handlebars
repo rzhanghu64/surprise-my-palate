@@ -47,7 +47,15 @@
                             <input type="button" value="Add ingredient to blacklist"
                                 onclick="addBlacklist(document.getElementById('ingredient').value)">
                             <ul class="list-group mt-3 mb-3" id="currentBlacklist"></ul>
-                            <input type="button" class="submitButton" value="Submit blacklist" onclick="submitBlacklist">
+
+                            <div class="form-group mb-3">
+                                <input type="text" class="form-control" id="meal">
+                            </div>
+                            <input type="button" value="Add meal to meal history"
+                                onclick="addMealHistory(document.getElementById('meal').value)">
+                            <ul class="list-group mt-3 mb-3" id="currentMealHistory"></ul>
+
+                            <input type="button" class="submitButton" value="Submit blacklist and meal history" onclick="submitBlacklist">
                         </form>
                     </div>
                 </div>
