@@ -1,7 +1,6 @@
-# surprise-my-name
+# Surprise My Palate (tentative name?)
 CUNY Hackathon 2021 Submission - Cheung Charles, Dominguez Luis, Hu Richard
 
-# Surprise My Palate (tentative name?)
 
 ## Inspiration
 Richard Hu loves to eat. He lives in NYC, one of the most diverse cuisine community in the world. But he used to eat things he was familiar with, rarely venturing out his comfort zone, until his Muslim friend came over to his neighborhood and he wanted to make sure she adhered to Halal.  This led him to try out Afghan food, which he enjoyed despite normally not being in love with spicy food, and Uighur cuisine, which he could inadequately describe as a mix of the tastes of influencing western Chinese cuisine, with some of the spices common in Muslim cuisine, but ultimately a unique taste in and of itself.  His introduction of these underrepresented cuisines in NYC helped him expand his palate, but made him worried about his lack of culinary experiences in underrepresented cultures.
