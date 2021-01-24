@@ -1,0 +1,19 @@
+{
+  "name": "surprise-my-tongue-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzhanghu64/surprise-my-tongue.git"
+  },
+  "author": "Luis Dominguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rzhanghu64/surprise-my-tongue/issues"
+  },
+  "homepage": "https://github.com/rzhanghu64/surprise-my-tongue#readme"
+}
