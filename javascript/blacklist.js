@@ -27,3 +27,12 @@ function submitBlacklist() {
     xhr.send(data);
 }
 
+$(document).on("click", ".submitButton", function () {
+    $.ajax({
+    method: "POST",
+    url: '/food',
+    data: {
+        ingredientBlacklist
+    }
+    });
+})
