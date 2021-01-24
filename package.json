@@ -1,0 +1,25 @@
+{
+  "name": "surprise-my-tongue",
+  "version": "1.0.0",
+  "description": "2021 CUNY Hackathon Submission",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzhanghu64/surprise-my-tongue.git"
+  },
+  "author": "cheung charles, dominguez luis, hu richard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzhanghu64/surprise-my-tongue/issues"
+  },
+  "homepage": "https://github.com/rzhanghu64/surprise-my-tongue#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "handlebars": "^4.7.6",
+    "nodejs": "0.0.0"
+  }
+}
