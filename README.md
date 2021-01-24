@@ -1,4 +1,4 @@
-# Surprise My Palate (tentative name?)
+# Surprise My Palate
 CUNY Hackathon 2021 Submission - Cheung Charles, Dominguez Luis, Hu Richard
 
 ## Inspiration
