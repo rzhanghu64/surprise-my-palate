@@ -1,0 +1,30 @@
+{
+  "name": "surprise-my-tongue-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "populate": "node populate.js",
+    "start": "npx nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzhanghu64/surprise-my-tongue.git"
+  },
+  "author": "Luis Dominguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rzhanghu64/surprise-my-tongue/issues"
+  },
+  "homepage": "https://github.com/rzhanghu64/surprise-my-tongue#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0"
+  }
+}
