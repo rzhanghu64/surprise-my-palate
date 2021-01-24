@@ -1,7 +1,6 @@
 # Surprise My Palate (tentative name?)
 CUNY Hackathon 2021 Submission - Cheung Charles, Dominguez Luis, Hu Richard
 
-
 ## Inspiration
 Richard Hu loves to eat. He lives in NYC, one of the most diverse cuisine community in the world. But he used to eat things he was familiar with, rarely venturing out his comfort zone, until his Muslim friend came over to his neighborhood and he wanted to make sure she adhered to Halal.  This led him to try out Afghan food, which he enjoyed despite normally not being in love with spicy food, and Uighur cuisine, which he could inadequately describe as a mix of the tastes of influencing western Chinese cuisine, with some of the spices common in Muslim cuisine, but ultimately a unique taste in and of itself.  His introduction of these underrepresented cuisines in NYC helped him expand his palate, but made him worried about his lack of culinary experiences in underrepresented cultures.
 
@@ -18,28 +17,8 @@ Should a purchase of newly-experienced dish be noted, display any gamified miles
 
 A final page will request that the user review the dish in the ordering apps, and thanks them for their willingness to try something new.
 
-## Workflow
-
-```
-text file
-
-[underrespresented/novel cuisines] <-- randomly select one
-
-Look for [cuisine] on Yelp; suggest first three restuarants
-```
-
-
-* User comes to App
-  * user enters diet
-  * user entrs meal history
-  * user submits
-  * server receives
-  * server randomly picks three cuisines + checks against blacklist (maybe ignore everything 3 stars and below)
-  * server contacts Yelp for cuisine, on pricing, restaurants
-  * front-end receives restaurant and food info
-  * front-end displays restaurant and food info and displays Google Maps API
-
 ## Implementation
 
+* jQuery Frontend
 * Node.js, Express backend
-* Axios for API, LevelDB for keeping 
+* Axios for API, lowdb for data storage
