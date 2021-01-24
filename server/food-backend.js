@@ -10,6 +10,30 @@ const adapter = new FileSync(process.env.DB_FILEPATH);
 const db = low(adapter);
 
 /**
+ * From an array of non-compatible foods, randomly obtain a maximum of three foods that can be satisfied (three by default)
+ */
+const getSomeFoods = (nc, num=3) => {
+  let goodFoods = getFoods(nc);
+  while(goodFoods.length > num) {
+    //Randomly remove one element
+    goodFoods.splice(common.randInt(0, goodFoods.length), 1);
+  }
+  return goodFoods;
+}
+
+/**
+ * From an array of non-compatible foods, obtain all foods that can be satisfied
+ */
+const getFoods = (nc) => {
+  const foods = db.get('foods').value();
+  let goodFoods = foods.filter((f) => {
+    //f.ingredients and nc have no common
+    return !f.ingredients.some(ing => nc.includes(ing));
+  });
+  return goodFoods;
+}
+
+/**
  * Function to pick a random food, constrained by arguments passed.
  * user object: Expecting diet and recent_meals
  */
@@ -19,6 +43,7 @@ const pickFood = (user) => {
   //Obtain non-compatible list of ingredients for the dietary and merge (as list)
   let nc = getNonCompatible(user.diet);
 
+  //TODO: Note that there might be an infinite loop on picking a food that does not exist
   //Check against DB to check for dietary restricts
   while(isGoodFood(food = randomFood(), user, nc))
     ;
@@ -61,5 +86,6 @@ const randomFood = () => {
 };
 
 module.exports = {
-  pickFood
+  getFoods,
+  getSomeFoods
 };
