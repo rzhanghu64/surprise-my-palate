@@ -33,7 +33,7 @@ function appendToMealHistory(item, index) {
     mydiv.appendChild(newcontent);
 }
 
-function submitBlacklist() {
+/* function submitBlacklist() {
     let xhr = new XMLHttpRequest();
     let url = "submit.php";
     xhr.open("POST, url, true;");
@@ -41,7 +41,7 @@ function submitBlacklist() {
 
     var data = JSON.stringify(ingredientBlacklist);
     xhr.send(data);
-}
+}*/
 
 $(document).on("click", ".submitButton", function () {
     console.log("HEY I WAS CLICKED");
