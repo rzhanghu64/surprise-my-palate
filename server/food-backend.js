@@ -9,6 +9,16 @@ require('dotenv').config()
 const adapter = new FileSync(process.env.DB_FILEPATH);
 const db = low(adapter);
 
+const yelpCall = async (term, loc) => {
+  const resp = await axios.get('https://api.yelp.com/v3/businesses/search', {
+    headers: {'Authorization': `Bearer ${process.env.YELP_API_KEY}`},
+    params: {
+      'term': term,
+      'location': loc
+    }
+  });
+};
+
 /**
  * From an array of non-compatible foods, randomly obtain a maximum of three foods that can be satisfied (three by default)
  */
